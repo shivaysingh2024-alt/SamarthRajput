@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Samarth Rajput | Biography</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#000;
+color:#fff;
+overflow-x:hidden;
+}
+
+body::before{
+content:"";
+position:fixed;
+width:100%;
+height:100%;
+background:linear-gradient(135deg,#0f0f0f,#000,#111);
+z-index:-2;
+}
+
+#particles{
+position:fixed;
+width:100%;
+height:100%;
+z-index:-1;
+}
+
+.hero{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+gap:60px;
+padding:40px;
+flex-wrap:wrap;
+}
+
+.hero img{
+width:320px;
+border-radius:20px;
+box-shadow:0 0 35px cyan;
+animation:float 5s infinite ease-in-out;
+}
+
+@keyframes float{
+0%,100%{transform:translateY(0);}
+50%{transform:translateY(-20px);}
+}
+
+.content{
+max-width:600px;
+}
+
+h1{
+font-size:60px;
+}
+
+h2{
+color:#00d4ff;
+margin:10px 0;
+}
+
+#typing{
+font-size:22px;
+border-right:3px solid white;
+white-space:nowrap;
+overflow:hidden;
+width:0;
+animation:typing 5s steps(40,end) forwards,blink .8s infinite;
+}
+
+@keyframes typing{
+to{width:100%;}
+}
+
+@keyframes blink{
+50%{border-color:transparent;}
+}
+
+section{
+padding:90px 10%;
+}
+
+.card{
+background:rgba(255,255,255,.08);
+backdrop-filter:blur(12px);
+padding:40px;
+border-radius:20px;
+box-shadow:0 0 20px rgba(0,255,255,.3);
+animation:fade 2s;
+}
+
+@keyframes fade{
+from{
+opacity:0;
+transform:translateY(50px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+p{
+line-height:2;
+font-size:19px;
+}
+
+.social{
+margin-top:40px;
+display:flex;
+gap:20px;
+flex-wrap:wrap;
+}
+
+.social a{
+text-decoration:none;
+color:white;
+background:#00bcd4;
+padding:12px 25px;
+border-radius:30px;
+transition:.3s;
+}
+
+.social a:hover{
+background:white;
+color:black;
+transform:scale(1.08);
+}
+
+footer{
+padding:25px;
+text-align:center;
+background:#050505;
+color:#999;
+}
+</style>
+
+</head>
+
+<body>
+
+<canvas id="particles"></canvas>
+
+<div class="hero">
+
+<img src="1000128637.jpg">
+
+<div class="content">
+
+<h1>Samarth Rajput</h1>
+
+<h2>Content Creator • Video Editor</h2>
+
+<div id="typing">
+Behind every smile is a story nobody knows...
+</div>
+
+<div class="social">
+
+<a href="https://www.instagram.com/samarthpratap_07?igsh=MWRpZ2lmbzJseGg0YQ==" target="_blank">
+📷 Instagram
+</a>
+
+<a href="https://www.youtube.com/@samarthrajput" target="_blank">
+📺 YouTube
+</a>
+
+<a href="#">Facebook</a>
+
+</div>
+
+</div>
+
+</div>
+
+<section>
+
+<div class="card">
+
+<h1>My Story</h1>
+
+<br>
+
+<p>
+
+“Naam sirf Samarth Rajput nahi, ek sapna hai jo har din aur bada ho raha hai.”
+
+Mera naam Samarth Pratap Singh, ya Samarth Rajput hai. Main ek simple background se belong karta hoon, lekin mere sapne kabhi simple nahi rahe. Zindagi ne mujhe bahut si challenges di hain, par maine hamesha unhe apni strength banaya. Main maanta hoon ki success sirf talent se nahi, balki consistency, discipline aur hard work se milti hai.
+
+Bachpan se hi mujhe kuch alag karne ka junoon tha. Jab dusre log sirf sapne dekhte the, tab maine un sapno ke liye mehnat karna shuru kar diya. Fitness, technology, content creation aur business jaise fields ne mujhe hamesha attract kiya. Isi passion ke saath maine khud ko har din improve karna apna mission bana liya.
+
+Main believe karta hoon ki har failure ek nayi learning lekar aata hai. Isliye kabhi haar maan kar rukna meri aadat nahi rahi. Chahe gym ho, coding ho, ya apna brand build karna ho, main har kaam poori dedication ke saath karta hoon. Mera dream sirf successful banna nahi, balki apni family ka naam roshan karna aur hazaron logon ko inspire karna hai.
+
+Meri personality simple hai, lekin meri thinking badi hai. Main respect, honesty aur loyalty ko sabse zyada importance deta hoon. Mere liye asli success wahi hai jab meri wajah se kisi aur ki life mein positive change aaye.
+
+Aaj main apne goals ki taraf ek-ek kadam badha raha hoon. Shayad meri journey abhi shuru hui hai, lekin mujhe yakeen hai ki ek din meri story un logon ke liye inspiration banegi jo apne sapno ke liye lad rahe hain. Main maanta hoon ki agar irade mazboot ho, toh koi bhi manzil door nahi hoti.
+
+</p>
+
+</div>
+
+</section>
+
+<footer>
+
+© 2026 Samarth Rajput | Dream • Create • Inspire
+
+</footer>
+
+<script>
+
+const canvas=document.getElementById("particles");
+const ctx=canvas.getContext("2d");
+
+canvas.width=window.innerWidth;
+canvas.height=window.innerHeight;
+
+let particles=[];
+
+for(let i=0;i<100;i++){
+
+particles.push({
+
+x:Math.random()*canvas.width,
+
+y:Math.random()*canvas.height,
+
+r:Math.random()*3,
+
+dx:(Math.random()-0.5),
+
+dy:(Math.random()-0.5)
+
+});
+
+}
+
+function animate(){
+
+ctx.clearRect(0,0,canvas.width,canvas.height);
+
+ctx.fillStyle="cyan";
+
+particles.forEach(p=>{
+
+ctx.beginPath();
+
+ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
+
+ctx.fill();
+
+p.x+=p.dx;
+
+p.y+=p.dy;
+
+if(p.x<0||p.x>canvas.width)p.dx*=-1;
+
+if(p.y<0||p.y>canvas.height)p.dy*=-1;
+
+});
+
+requestAnimationFrame(animate);
+
+}
+
+animate();
+
+window.onresize=()=>{
+
+canvas.width=window.innerWidth;
+canvas.height=window.innerHeight;
+
+}
+
+</script>
+
+</body>
+</html>
